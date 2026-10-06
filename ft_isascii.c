@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 13:38:18 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/06 15:31:29 by jmarcos          ###   ########.fr       */
+/*   Created: 2026/10/06 13:39:15 by jmarcos           #+#    #+#             */
+/*   Updated: 2026/10/06 14:50:06 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*memset(void *s, int c, size_t n);
-void	bzero(void *s, size_t n);
-void	*memcpy(void *dest, const void *src, size_t n);
+int	ft_isascii(char c)
+{
+	if (c > 127)
+		return (0);
+	return (1);
+}
