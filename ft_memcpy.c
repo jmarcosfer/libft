@@ -6,10 +6,21 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 15:30:14 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/06 15:31:55 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/07 15:19:07 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 void	*memcpy(void *dest, const void *src, size_t n)
 {
+	size_t	i;
 
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
+}
