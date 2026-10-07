@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/07 17:00:14 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/07 17:25:11 by jmarcos          ###   ########.fr       */
+/*   Created: 2026/10/07 17:23:03 by jmarcos           #+#    #+#             */
+/*   Updated: 2026/10/07 17:40:29 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
+size_t	*ft_strcat(char *dst, const char *src, size_t siz)
 {
-	size_t	i;
-	size_t	src_len;
+	size_t	min_size;
+	size_t	dst_len;
 
-	i = 0;
-	src_len = ft_strlen(src);
-	while ((i < siz - 1) && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (siz > 0)
-		dst[i] = '\0';
-	return (src_len);
+	dst_len = ft_strlen(dst);
+	if (siz < dst_len)
+		min_size = siz;
+	else
+		min_size = dst_len;
+	while (*dst)
+		dst++;
+	siz--;
+	while (siz--)
+		*dst++ = *src++;
+	if (siz > ft_strlen(dst))
+		*dst = '\0';
+	return (ft_strlen(src) + min_size);
 }
