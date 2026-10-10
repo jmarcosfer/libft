@@ -21,13 +21,22 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	s2chr = s2;
 	if (n == 0)
 		return (0);
-	while (n)
-	{	
-		if (*s1chr != *s2chr)
-		{
-			s1chr++;
-			s2chr++;
-		}
+	while (n && (*s1chr == *s2chr))
+	{
+		s1chr++;
+		s2chr++;
 		n--;
 	}
-	if (
+	if ((*s1chr == *s2chr) && n == 0)
+		return (0);
+	else
+		return (*s1chr - *s2chr);
+}
+
+// int	main(void)
+// {
+// 	char	*str1 = "mystring";
+// 	char	*str2 = "mystr8ng";
+// 
+// 	return (ft_memcmp(str1, str2, 8));
+// }	
