@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 15:26:27 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/06 15:29:50 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/20 13:13:33 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void	bzero(void *s, size_t n)
 {
 	size_t	i;
+	char	*schar;
 
+	schar = s;
 	i = 0;
 	while (i < n)
 	{
-		s[i] = '\0';
+		schar[i] = '\0';
 		i++;
 	}
 }

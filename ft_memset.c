@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 15:19:58 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/06 15:26:06 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/20 13:15:18 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void	*memset(void *s, int c, size_t n)
 {
 	size_t	i;
+	char	*schar;
 
 	i = 0;
+	schar = s;
 	while (i < n)
 	{
-		s[i] = c;
+		schar[i] = c;
 		i++;
 	}
 	return (s);
