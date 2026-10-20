@@ -1,0 +1,51 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/20 13:24:13 by jmarcos           #+#    #+#             */
+/*   Updated: 2026/10/20 15:24:51 by jmarcos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_atoi(const char *nptr)
+{
+	int	res;
+	int	sign;
+
+	res = 0;
+	sign = 1;
+	while (*nptr == 32)
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+	{
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
+	}
+	while (*nptr != '\0')
+	{
+		if (ft_isdigit(*nptr))
+			res = res * 10 + (*nptr - '0');
+		else
+			break ;
+		nptr++;
+	}
+	return (res);
+}
+
+#include <stdlib.h>
+#include <stdio.h>
+int	main(int argc, char argv[])
+{
+	char	*test_str = argv[1];
+	int	testres = ft_atoi((const char *)test_str);
+	int	origres = atoi((const char *)test_str);
+
+	printf("testres: %i, origres: %i", testres, origres);
+	return (0);
+}
