@@ -6,27 +6,12 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:33:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/16 14:48:06 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/20 13:20:13 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
-
-static	int     ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-        while (*s1 && *s2 && n)
-        {
-                if (*s1 != *s2)
-                        return (*s1 - *s2);
-                n--;
-                if (n == 0)
-                        break ;
-                s1++;
-                s2++;
-        }
-        return (*s1 - *s2);
-}
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -45,4 +30,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
