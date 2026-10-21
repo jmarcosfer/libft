@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 13:38:18 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 13:43:36 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 16:32:43 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	bzero(void *s, size_t n);
 void	*memcpy(void *dest, const void *src, size_t n);
 void	*memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t siz);
-size_t	*ft_strcat(char *dst, const char *src, size_t siz);
+size_t	ft_strlcat(char *dst, const char *src, size_t siz);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *str, int c);

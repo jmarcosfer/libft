@@ -6,9 +6,11 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:10:52 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/07 16:57:22 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 16:24:45 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

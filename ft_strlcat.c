@@ -6,14 +6,14 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 17:23:03 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/07 17:40:29 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 16:32:16 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-size_t	*ft_strcat(char *dst, const char *src, size_t siz)
+size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 {
 	size_t	min_size;
 	size_t	dst_len;
