@@ -6,13 +6,13 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 15:26:27 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 19:51:03 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 20:22:29 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*schar;
