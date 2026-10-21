@@ -6,11 +6,13 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 12:59:21 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/06 13:10:57 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 20:06:28 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	isupper(char c)
+#include "libft.h"
+
+static	int	isupper(int c)
 {
 	if (c < 'A' || c > 'Z')
 		return (0);
@@ -18,7 +20,7 @@ static	int	isupper(char c)
 		return (1);
 }
 
-static int	islower(char c)
+static int	islower(int c)
 {
 	if (c < 'a' || c > 'z')
 		return (0);
@@ -26,7 +28,7 @@ static int	islower(char c)
 		return (1);
 }
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if (isupper(c) || islower(c))
 		return (1);

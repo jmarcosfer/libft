@@ -6,13 +6,11 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 11:56:58 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 16:18:23 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 19:58:04 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <limits.h>
+#include "libft.h"
 
 static int	check_mult_overflow(unsigned int num1, unsigned int num2)
 {

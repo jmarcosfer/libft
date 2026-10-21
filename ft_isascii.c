@@ -6,11 +6,13 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 13:39:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/06 14:50:06 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 20:05:24 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	if (c > 127)
 		return (0);
