@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:24:13 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/20 15:24:51 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/21 13:12:20 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,18 @@ int	ft_atoi(const char *nptr)
 			break ;
 		nptr++;
 	}
-	return (res);
+	return (res * sign);
 }
 
-#include <stdlib.h>
-#include <stdio.h>
-int	main(int argc, char argv[])
-{
-	char	*test_str = argv[1];
-	int	testres = ft_atoi((const char *)test_str);
-	int	origres = atoi((const char *)test_str);
-
-	printf("testres: %i, origres: %i", testres, origres);
-	return (0);
-}
+// #include <stdlib.h>
+// #include <stdio.h>
+// int	main(int argc, char **argv)
+// {
+// 	(void)	argc;
+// 	char	*test_str = argv[1];
+// 	int	testres = ft_atoi((const char *)test_str);
+// 	int	origres = atoi((const char *)test_str);
+// 
+// 	printf("testres: %i, origres: %i", testres, origres);
+// 	return (0);
+// }
