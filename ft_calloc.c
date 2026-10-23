@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 11:56:58 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 19:58:04 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/23 13:27:57 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total_size;
 
-	if (check_mult_overflow(nmemb, size))
-		return (NULL);
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
+	if (check_mult_overflow(nmemb, size))
+		return (NULL);
 	total_size = nmemb * size;
 	return (malloc(total_size));
 }
