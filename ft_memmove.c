@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:10:52 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 19:55:46 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/23 13:48:56 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		end_dest = d + (n - 1);
 		end_src = s + (n - 1);
 		while (n--)
-			*d-- = *s--;
+			*end_dest-- = *end_src--;
 	}
 	return (dest);
 }
