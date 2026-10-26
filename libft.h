@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 13:38:18 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/26 15:54:26 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/26 16:01:32 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char	*ft_strdup(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif // LIBFT_H
