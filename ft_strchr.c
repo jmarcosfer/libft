@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:25:39 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 19:56:11 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/27 14:35:47 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
+	c = (char) c;
 	while (*str && *str != c)
 		str++;
 	if (*str == c)
