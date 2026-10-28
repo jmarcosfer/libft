@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 15:55:35 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/27 17:28:45 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/28 13:42:08 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (res);
 }
 
-// #include <string.h>
-// #include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
 // int	main(void)
 // {
 // 	char	*s = ft_strtrim("", "123");
@@ -49,6 +49,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	char	*testnum = "123";
 // 	printf("testnum: %p, ft_strchr: %p\n", testnum, ft_strchr(testnum, '\0'));
 // 	printf("testnum: %p, strchr: %p\n", testnum, strchr(testnum, '\0'));
+// 	char	*only_sep = ft_strtrim("     ", " ");
+// 	printf("only_sep: %s\n", only_sep);
 // //	while (*s)
 // //		printf("inside s: %c", *s);
 // //	int	i = strcmp(s, "");
