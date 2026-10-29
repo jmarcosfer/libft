@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:12:24 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 19:49:33 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/29 17:02:13 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	schr = s;
 	chr = c;
+	if (n == 0)
+		return (NULL);
 	while ((*schr != chr) && n--)
 		schr++;
 	if (*schr == chr)
