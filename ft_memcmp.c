@@ -37,6 +37,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // {
 // 	char	*str1 = "mystring";
 // 	char	*str2 = "mystr8ng";
-// 
+//
 // 	return (ft_memcmp(str1, str2, 8));
-// }	
+// }

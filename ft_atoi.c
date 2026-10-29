@@ -46,7 +46,7 @@ int	ft_atoi(const char *nptr)
 // 	char	*test_str = argv[1];
 // 	int	testres = ft_atoi((const char *)test_str);
 // 	int	origres = atoi((const char *)test_str);
-// 
+//
 // 	printf("testres: %i, origres: %i", testres, origres);
 // 	return (0);
 // }

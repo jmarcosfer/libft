@@ -6,7 +6,7 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 17:31:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/28 14:43:52 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/29 14:33:27 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static size_t	arr_len(char **arr)
 
 static char	**arr_prepend(char **old_arr, char *new_item)
 {
-	char	**new_arr;
-	size_t	old_arr_len;
+	char			**new_arr;
+	size_t			old_arr_len;
 	unsigned int	i;
 
 	old_arr_len = arr_len(old_arr);
@@ -71,8 +71,10 @@ char	**ft_split(char const *s, char c)
 	char	*sub_s;
 	char	**temp_res;
 	char	*trim_s;
-	char	sep_str[2] = {c, '\0'};
+	char	sep_str[2];
 
+	sep_str[0] = c;
+	sep_str[1] = '\0';
 	trim_s = ft_strtrim(s, sep_str);
 	if (!*trim_s)
 	{
@@ -82,11 +84,11 @@ char	**ft_split(char const *s, char c)
 	split_ptr = ft_strchr(trim_s, c);
 	if (!split_ptr || !c)
 		return (single_item_arr(trim_s));
-	sub_s  = malloc(split_ptr - trim_s + 1);
+	sub_s = malloc(split_ptr - trim_s + 1);
 	if (!sub_s)
 		return (NULL);
 	ft_strlcpy(sub_s, trim_s, split_ptr - trim_s + 1);
-	temp_res = ft_split(split_ptr+1, c);
+	temp_res = ft_split(split_ptr + 1, c);
 	free(trim_s);
 	return (arr_prepend(temp_res, sub_s));
 }

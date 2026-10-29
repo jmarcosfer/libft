@@ -16,9 +16,9 @@
 static char	dtoa(int i)
 {
 	char	unit;
-	int	mod;
+	int		mod;
 
-	mod = i % 10;	
+	mod = i % 10;
 	if (i < 0)
 		mod *= -1;
 	unit = mod + '0';
@@ -29,7 +29,7 @@ static size_t	int_size(int i)
 {
 	size_t	n;
 
-	n = 1;	
+	n = 1;
 	if (i < 0)
 	{
 		n++;

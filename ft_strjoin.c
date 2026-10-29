@@ -14,11 +14,11 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	s1_len;
-	size_t	s2_len;
-	size_t	total_len;
+	size_t			s1_len;
+	size_t			s2_len;
+	size_t			total_len;
 	unsigned int	i;
-	char	*res;
+	char			*res;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
