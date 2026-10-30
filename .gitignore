@@ -1,3 +1,5 @@
 *.o
 *.a
 *.swp
+sfabi_tester/
+*.out
