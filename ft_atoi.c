@@ -6,11 +6,20 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:24:13 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/21 13:12:20 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/30 14:56:03 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isspace(int c)
+{
+	c = (char) c;
+
+	if ((c >= '\t' && c <= '\r') || c == ' ')
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *nptr)
 {
@@ -19,7 +28,7 @@ int	ft_atoi(const char *nptr)
 
 	res = 0;
 	sign = 1;
-	while (*nptr == 32)
+	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
@@ -46,7 +55,7 @@ int	ft_atoi(const char *nptr)
 // 	char	*test_str = argv[1];
 // 	int	testres = ft_atoi((const char *)test_str);
 // 	int	origres = atoi((const char *)test_str);
-//
+// 
 // 	printf("testres: %i, origres: %i", testres, origres);
 // 	return (0);
 // }
