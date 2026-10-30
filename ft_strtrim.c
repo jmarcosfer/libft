@@ -6,7 +6,7 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 15:55:35 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/28 13:42:08 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/30 15:36:49 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res_write;
 
 	res_start_i = (char *)s1;
-	res_end_i = (char *)s1 + ft_strlen(s1);
+	res_end_i = (char *)s1 + ft_strlen(s1) - 1;
 	while (*res_start_i && ft_strchr(set, *res_start_i))
 		res_start_i++;
 	if (res_start_i < res_end_i)
