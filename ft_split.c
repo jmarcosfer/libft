@@ -6,7 +6,7 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 17:31:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/30 18:18:30 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/30 20:32:35 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,15 @@ static char	**single_item_arr(char *item)
 	*arr = item;
 	return (arr);
 }
+
+static char	**handle_empty_str(char *s)
+{
+	if (!s)
+		return (NULL);
+	free(s);
+	return (create_arr(0));
+}
+
 
 static char	**arr_prepend(char **old_arr, char *new_item)
 {
@@ -68,11 +77,8 @@ char	**ft_split(char const *s, char c)
 	sep_str[0] = c;
 	sep_str[1] = '\0';
 	trim_s = ft_strtrim(s, sep_str);
-	if (!*trim_s)
-	{
-		free(trim_s);
-		return (create_arr(0));
-	}
+	if (!trim_s || !*trim_s)
+		return (handle_empty_str(trim_s));
 	split_ptr = ft_strchr(trim_s, c);
 	if (!split_ptr || !c)
 		return (single_item_arr(trim_s));
@@ -84,7 +90,7 @@ char	**ft_split(char const *s, char c)
 	free(trim_s);
 	return (arr_prepend(temp_res, sub_s));
 }
-// tests failing: 1, 11, 14, 16, 19, 22, 25, 29
+
 // #include <stdio.h>
 // #include <malloc.h>
 // int	main(void)
@@ -93,6 +99,7 @@ char	**ft_split(char const *s, char c)
 // 	size_t	count = malloc_usable_size(tab);
 // 	//char	**tab_2 = ft_split("     ", ' ');
 // 	printf("tab alloc size is: %zu\n", count);
-// 	printf("size of char * is: %zu, so tab size is: %zu\n", sizeof(char *), count / sizeof(char *));
+// 	printf("size of char * is: %zu, so tab size is: %zu\n", sizeof(char *),
+//		count / sizeof(char *));
 // 	return (0);
 // }
