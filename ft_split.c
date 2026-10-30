@@ -6,7 +6,7 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 17:31:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/29 14:33:27 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/10/30 18:18:30 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	**create_arr(size_t size)
 {
 	char	**arr;
 
-	arr = malloc(sizeof(char *) * size + 1);
+	arr = malloc(sizeof(char *) * (size + 1));
 	if (!arr)
 		return (NULL);
 	arr[size] = NULL;
@@ -34,23 +34,15 @@ static char	**single_item_arr(char *item)
 	return (arr);
 }
 
-static size_t	arr_len(char **arr)
-{
-	size_t	len;
-
-	len = 0;
-	while (*arr++)
-		len++;
-	return (len);
-}
-
 static char	**arr_prepend(char **old_arr, char *new_item)
 {
 	char			**new_arr;
 	size_t			old_arr_len;
 	unsigned int	i;
 
-	old_arr_len = arr_len(old_arr);
+	old_arr_len = 0;
+	while (old_arr[old_arr_len])
+		old_arr_len++;
 	new_arr = create_arr(old_arr_len + 1);
 	if (!new_arr)
 		return (NULL);
@@ -92,16 +84,15 @@ char	**ft_split(char const *s, char c)
 	free(trim_s);
 	return (arr_prepend(temp_res, sub_s));
 }
-
+// tests failing: 1, 11, 14, 16, 19, 22, 25, 29
 // #include <stdio.h>
+// #include <malloc.h>
 // int	main(void)
 // {
-// 	//char	**tab = ft_split("  tripouille  42  ", ' ');
-// 	char	**tab_2 = ft_split("     ", ' ');
-// 	while (*tab_2)
-// 	{
-// 		printf("next tab item: %s\n", *tab_2);
-// 		tab_2++;
-// 	}
+// 	char	**tab = ft_split("  tripouille  42  ", ' ');
+// 	size_t	count = malloc_usable_size(tab);
+// 	//char	**tab_2 = ft_split("     ", ' ');
+// 	printf("tab alloc size is: %zu\n", count);
+// 	printf("size of char * is: %zu, so tab size is: %zu\n", sizeof(char *), count / sizeof(char *));
 // 	return (0);
 // }
