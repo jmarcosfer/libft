@@ -94,9 +94,9 @@ Aquí tienes las tablas corregidas y organizadas correctamente en Markdown. Se h
 | `size_t ft_strlen(const char *s);` | **`s`**: La cadena de caracteres. | Calcula la longitud de la cadena `s` (sin contar el carácter nulo final). |
 | `size_t ft_strlcpy(char *dst, const char *src, size_t siz);` | **`dst`**: Buffer de destino.<br>**`src`**: Cadena de origen.<br>**`siz`**: Tamaño total del buffer de destino. | Copia cadenas de forma segura asegurando que el destino termine en `\0` y no desborde. |
 | `size_t ft_strlcat(char *dst, const char *src, size_t siz);` | **`dst`**: Buffer de destino (cadena existente).<br>**`src`**: Cadena a concatenar.<br>**`siz`**: Tamaño total del buffer de destino. | Concatena la cadena `src` al final de `dst` de forma segura y limitada por `siz`. |
-| `char *ft_strchr(const char *src, int val);` | **`s`**: Cadena donde buscar.<br>**`c`**: Carácter a buscar. | Localiza la primera aparición del carácter `c` en la cadena `s`. |
-| `char *ft_strrchr(const char *src, int val);` | **`s`**: Cadena donde buscar.<br>**`c`**: Carácter a buscar. | Localiza la última aparición del carácter `c` en la cadena `s`. |
-| `int ft_strncmp(const char *s1, const char *s2, size_t len);` | **`s1`**, **`s2`**: Cadenas a comparar.<br>**`n`**: Número máximo de caracteres a comparar. | Compara hasta `n` caracteres de las cadenas `s1` y `s2`. |
+| `char *ft_strchr(const char *src, int val);` | **`src`**: Cadena donde buscar.<br>**`c`**: Carácter a buscar. | Localiza la primera aparición del carácter `val` en la cadena `src`. |
+| `char *ft_strrchr(const char *src, int val);` | **`src`**: Cadena donde buscar.<br>**`c`**: Carácter a buscar. | Localiza la última aparición del carácter `val` en la cadena `src`. |
+| `int ft_strncmp(const char *s1, const char *s2, size_t len);` | **`s1`**, **`s2`**: Cadenas a comparar.<br>**`len`**: Número máximo de caracteres a comparar. | Compara hasta `len` caracteres de las cadenas `s1` y `s2`. |
 | `char *ft_strnstr(const char *big, const char *little, size_t len);` | **`big`**: Cadena principal.<br>**`little`**: Subcadena a buscar.<br>**`len`**: Límite de caracteres a revisar en `big`. | Busca la primera aparición de la subcadena `little` dentro de `big`, revisando un máximo de `len` bytes. |
 | `char *ft_strdup(const char *s);` | **`s`**: Cadena a duplicar. | Duplica la cadena `s` reservando memoria dinámicamente para la nueva copia. |
 
