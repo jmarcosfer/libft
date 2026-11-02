@@ -6,26 +6,26 @@
 /*   By: jmarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:35:19 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/30 13:14:44 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/11/02 17:30:20 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *src, int val)
 {
 	char	*last_found;
 
-	c = (char) c;
+	val = (char) val;
 	last_found = NULL;
-	while (*str)
+	while (*src)
 	{
-		if (*str == c)
-			last_found = (char *)str;
-		str++;
+		if (*src == val)
+			last_found = (char *)src;
+		src++;
 	}
-	if (*str == c)
-		return ((char *)str);
+	if (*src == val)
+		return ((char *)src);
 	else if (last_found != NULL)
 		return (last_found);
 	else
