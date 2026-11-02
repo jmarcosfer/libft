@@ -6,7 +6,7 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 17:31:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/30 20:32:35 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/11/02 15:50:36 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ static char	**handle_empty_str(char *s)
 	free(s);
 	return (create_arr(0));
 }
-
 
 static char	**arr_prepend(char **old_arr, char *new_item)
 {
