@@ -43,8 +43,7 @@ make re
 Para utilizar `libft` en tus programas, añade `#include "libft.h"` en tus archivos fuente y compila tu programa enlazando la librería:
 
 ```bash
-gcc -Wall -Wextra -Werror tu_programa.c -L. -lft -o tu_programa
-
+gcc -Wall -Wextra -Werror tu_programa.c -L<libft_path> -lft -I<libft_header_path> -o tu_programa
 ```
 
 ---
@@ -140,13 +139,14 @@ Aquí tienes las tablas corregidas y organizadas correctamente en Markdown. Se h
 ### Recursos de Referencia
 
 * **Man pages:** Documentación oficial de Linux/Unix (`man 3 <función>`).
-* **Documentación de C estándar:** Referencias sobre tipos de datos, punteros y gestión de memoria.
-* **Tester de la comunidad:** Uso de testers públicos (como `libft-unit-test` o `Tripouille/libftTester`) para verificar la robustez de las funciones.
+* **Google/StackOverflow/Geeksforgeeks** Dudas sobre C o algoritmos.
+* **Testers:** Uso de testers de la comunidad para verificar que las funciones eran correctas para diversos casos:
+	- [Tripouille/libftTester](https://github.com/Tripouille/libftTester)
+	- [Sfabi28/libft_tester](https://github.com/Sfabi28/libft_tester)
 
-### Uso de Inteligencia Artificial (IA)
+### Uso de IA
 
 En la realización de este proyecto, la IA se ha utilizado de forma complementaria para:
 
-* **Estructuración y redacción:** Creación de plantillas para este archivo `README.md`.
-* **Comprensión de conceptos:** Explicación teórica sobre el funcionamiento avanzado de punteros a funciones y gestión de memoria dinámica en C.
-* **Resolución de dudas de depuración:** Análisis conceptual de casos límite (edge cases) en funciones complejas como `ft_split` o `ft_strtrim`.
+* Redacción de este archivo `README.md`, que ha sido revisado y corregido manualmente donde era necesario.
+* Resolución de dudas durante debugging de casos complejos en funciones avanzadas como `ft_split` o `ft_strtrim`, siempre después de haber escrito manualmente las versiones iniciales del código antes de preguntar y nunca haciendo copia/pega del código de la IA.
