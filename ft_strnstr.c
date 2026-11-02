@@ -6,33 +6,53 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:33:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/30 14:13:04 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/11/02 15:28:55 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	last_i;
-	size_t	needle_len;
+	size_t	max_i;
+	size_t	big_little_diff;
+	size_t	little_len;
+	char	*last_i;
 
-	if (!*needle)
-		return ((char *)haystack);
-	if (!*haystack || !len)
+	if (!*little)
+		return ((char *)big);
+	little_len = ft_strlen(little);
+	if (!*big || !len || len < little_len)
 		return (NULL);
-	needle_len = ft_strlen(needle);
-	if (needle_len == 1)
-		return (ft_strchr(haystack, *needle));
-	last_i = 1 + ft_strlen(haystack) - needle_len;
-	if (len - 1 < last_i)
-		last_i = len - 1;
-	while (last_i-- > 0)
+	big_little_diff = ft_strlen(big) - little_len;
+	if (little_len == 1)
+		return (ft_strchr(big, *little));
+	max_i = len - little_len;
+	if (max_i > big_little_diff)
+		max_i = big_little_diff;
+	last_i = (char *) &big[max_i];
+	while (big <= last_i)
 	{
-		if (!ft_strncmp(haystack, needle, needle_len))
-			return ((char *)haystack);
-		haystack++;
+		if (!ft_strncmp(big, little, little_len))
+			return ((char *)big);
+		big++;
 	}
 	return (NULL);
 }
+
+// #include <stdint.h>
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char	s[] = "aaabcabcd";
+// 	char	*res = ft_strnstr(s, "aabc", -1);
+// 	printf("res: %p\n", res);
+// //	size_t	test_size = -1;
+// //	printf("test_size: %zu\n", test_size);
+// //	int	itest_size = SIZE_MAX;
+// //	printf("itest_size: %i\n", itest_size);
+// //	int	not_test_size = !test_size;
+// //	printf("not test size: %i\n", not_test_size);
+// 	return (0);
+// }
