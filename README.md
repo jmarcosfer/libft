@@ -76,65 +76,65 @@ A continuación se detallan las funciones implementadas en la librería `libft`,
 
 | Función (Firma) | Parámetros | Descripción |
 | --- | --- | --- |
-| `void *ft_memset(void *s, int c, size_t n);` | **`s`**: Puntero al área de memoria.<br>
+| `void *ft_memset(void *s, int c, size_t n);` | **`s`**: Puntero al área de memoria.|
 
-<br>**`c`**: Valor a establecer (convertido a `unsigned char`).<br>
+|**`c`**: Valor a establecer (convertido a `unsigned char`).|
 
-<br>**`n`**: Número de bytes a rellenar. | Rellena los primeros `n` bytes del área de memoria apuntada por `s` con el byte `c`. |
-| `void ft_bzero(void *s, size_t n);` | **`s`**: Puntero al área de memoria.<br>
+|**`n`**: Número de bytes a rellenar. | Rellena los primeros `n` bytes del área de memoria apuntada por `s` con el byte `c`. |
+| `void ft_bzero(void *s, size_t n);` | **`s`**: Puntero al área de memoria.|
 
-<br>**`n`**: Número de bytes a poner a cero. | Escribe ceros en los primeros `n` bytes del área de memoria apuntada por `s`. |
-| `void *ft_memcpy(void *dest, const void *src, size_t n);` | **`dest`**: Puntero al destino.<br>
+|**`n`**: Número de bytes a poner a cero. | Escribe ceros en los primeros `n` bytes del área de memoria apuntada por `s`. |
+| `void *ft_memcpy(void *dest, const void *src, size_t n);` | **`dest`**: Puntero al destino.|
 
-<br>**`src`**: Puntero al origen.<br>
+|**`src`**: Puntero al origen.|
 
-<br>**`n`**: Número de bytes a copiar. | Copia `n` bytes desde el área de memoria `src` a `dest` (las áreas no deben solaparse). |
-| `void *ft_memmove(void *dest, const void *src, size_t n);` | **`dest`**: Puntero al destino.<br>
+|**`n`**: Número de bytes a copiar. | Copia `n` bytes desde el área de memoria `src` a `dest` (las áreas no deben solaparse). |
+| `void *ft_memmove(void *dest, const void *src, size_t n);` | **`dest`**: Puntero al destino.|
 
-<br>**`src`**: Puntero al origen.<br>
+|**`src`**: Puntero al origen.|
 
-<br>**`n`**: Número de bytes a copiar. | Copia `n` bytes desde `src` a `dest`, permitiendo de manera segura áreas de memoria solapadas. |
-| `void *ft_memchr(const void *s, int c, size_t n);` | **`s`**: Puntero al área de memoria a examinar.<br>
+|**`n`**: Número de bytes a copiar. | Copia `n` bytes desde `src` a `dest`, permitiendo de manera segura áreas de memoria solapadas. |
+| `void *ft_memchr(const void *s, int c, size_t n);` | **`s`**: Puntero al área de memoria a examinar.|
 
-<br>**`c`**: Carácter (byte) a buscar.<br>
+|**`c`**: Carácter (byte) a buscar.|
 
-<br>**`n`**: Número máximo de bytes a revisar. | Busca la primera aparición del byte `c` en los primeros `n` bytes del área de memoria `s`. |
-| `int ft_memcmp(const void *s1, const void *s2, size_t n);` | **`s1`**, **`s2`**: Punteros a las dos áreas de memoria.<br>
+|**`n`**: Número máximo de bytes a revisar. | Busca la primera aparición del byte `c` en los primeros `n` bytes del área de memoria `s`. |
+| `int ft_memcmp(const void *s1, const void *s2, size_t n);` | **`s1`**, **`s2`**: Punteros a las dos áreas de memoria.|
 
-<br>**`n`**: Número de bytes a comparar. | Compara los primeros `n` bytes de las áreas de memoria `s1` y `s2`. |
-| `void *ft_calloc(size_t nmemb, size_t size);` | **`nmemb`**: Número de elementos a asignar.<br>
+|**`n`**: Número de bytes a comparar. | Compara los primeros `n` bytes de las áreas de memoria `s1` y `s2`. |
+| `void *ft_calloc(size_t nmemb, size_t size);` | **`nmemb`**: Número de elementos a asignar.|
 
-<br>**`size`**: Tamaño en bytes de cada elemento. | Reserva memoria dinámica para un array de `nmemb` elementos de `size` bytes cada uno y la inicializa a cero. |
+|**`size`**: Tamaño en bytes de cada elemento. | Reserva memoria dinámica para un array de `nmemb` elementos de `size` bytes cada uno y la inicializa a cero. |
 
 #### Cadenas de Caracteres
 
 | Función (Firma) | Parámetros | Descripción |
 | --- | --- | --- |
 | `size_t ft_strlen(const char *s);` | **`s`**: La cadena de caracteres. | Calcula la longitud de la cadena `s` (sin contar el carácter nulo final). |
-| `size_t ft_strlcpy(char *dst, const char *src, size_t size);` | **`dst`**: Buffer de destino.<br>
+| `size_t ft_strlcpy(char *dst, const char *src, size_t size);` | **`dst`**: Buffer de destino.|
 
-<br>**`src`**: Cadena de origen.<br>
+|**`src`**: Cadena de origen.|
 
-<br>**`size`**: Tamaño total del buffer de destino. | Copia cadenas de forma segura asegurando que el destino termine en `\0` y no desborde. |
-| `size_t ft_strlcat(char *dst, const char *src, size_t size);` | **`dst`**: Buffer de destino (cadena existente).<br>
+|**`size`**: Tamaño total del buffer de destino. | Copia cadenas de forma segura asegurando que el destino termine en `\0` y no desborde. |
+| `size_t ft_strlcat(char *dst, const char *src, size_t size);` | **`dst`**: Buffer de destino (cadena existente).|
 
-<br>**`src`**: Cadena a concatenar.<br>
+|**`src`**: Cadena a concatenar.|
 
-<br>**`size`**: Tamaño total del buffer de destino. | Concatena la cadena `src` al final de `dst` de forma segura y limitada por `size`. |
-| `char *ft_strchr(const char *s, int c);` | **`s`**: Cadena donde buscar.<br>
+|**`size`**: Tamaño total del buffer de destino. | Concatena la cadena `src` al final de `dst` de forma segura y limitada por `size`. |
+| `char *ft_strchr(const char *s, int c);` | **`s`**: Cadena donde buscar.|
 
-<br>**`c`**: Carácter a buscar. | Localiza la primera aparición del carácter `c` en la cadena `s`. |
-| `char *ft_strrchr(const char *s, int c);` | **`s`**: Cadena donde buscar.<br>
+|**`c`**: Carácter a buscar. | Localiza la primera aparición del carácter `c` en la cadena `s`. |
+| `char *ft_strrchr(const char *s, int c);` | **`s`**: Cadena donde buscar.|
 
-<br>**`c`**: Carácter a buscar. | Localiza la última aparición del carácter `c` en la cadena `s`. |
-| `int ft_strncmp(const char *s1, const char *s2, size_t n);` | **`s1`**, **`s2`**: Cadenas a comparar.<br>
+|**`c`**: Carácter a buscar. | Localiza la última aparición del carácter `c` en la cadena `s`. |
+| `int ft_strncmp(const char *s1, const char *s2, size_t n);` | **`s1`**, **`s2`**: Cadenas a comparar.|
 
-<br>**`n`**: Número máximo de caracteres a comparar. | Compara hasta `n` caracteres de las cadenas `s1` y `s2`. |
-| `char *ft_strnstr(const char *big, const char *little, size_t len);` | **`big`**: Cadena principal.<br>
+|**`n`**: Número máximo de caracteres a comparar. | Compara hasta `n` caracteres de las cadenas `s1` y `s2`. |
+| `char *ft_strnstr(const char *big, const char *little, size_t len);` | **`big`**: Cadena principal.|
 
-<br>**`little`**: Subcadena a buscar.<br>
+|**`little`**: Subcadena a buscar.|
 
-<br>**`len`**: Límite de caracteres a revisar en `big`. | Busca la primera aparición de la subcadena `little` dentro de `big`, revisando un máximo de `len` bytes. |
+|**`len`**: Límite de caracteres a revisar en `big`. | Busca la primera aparición de la subcadena `little` dentro de `big`, revisando un máximo de `len` bytes. |
 | `char *ft_strdup(const char *s);` | **`s`**: Cadena a duplicar. | Duplica la cadena `s` reservando memoria dinámicamente para la nueva copia. |
 
 ---
@@ -143,37 +143,37 @@ A continuación se detallan las funciones implementadas en la librería `libft`,
 
 | Función (Firma) | Parámetros | Descripción |
 | --- | --- | --- |
-| `char *ft_substr(const char *s, unsigned int start, size_t len);` | **`s`**: Cadena original.<br>
+| `char *ft_substr(const char *s, unsigned int start, size_t len);` | **`s`**: Cadena original.|
 
-<br>**`start`**: Índice de inicio en `s`.<br>
+|**`start`**: Índice de inicio en `s`.|
 
-<br>**`len`**: Longitud máxima de la subcadena. | Extrae una subcadena de `s` empezando en `start` con una longitud máxima de `len` (reserva memoria). |
+|**`len`**: Longitud máxima de la subcadena. | Extrae una subcadena de `s` empezando en `start` con una longitud máxima de `len` (reserva memoria). |
 | `char *ft_strjoin(const char *s1, const char *s2);` | **`s1`**, **`s2`**: Las dos cadenas a unir. | Reserva memoria y concatena `s1` y `s2` en una nueva cadena resultante. |
-| `char *ft_strtrim(const char *s1, const char *set);` | **`s1`**: Cadena a recortar.<br>
+| `char *ft_strtrim(const char *s1, const char *set);` | **`s1`**: Cadena a recortar.|
 
-<br>**`set`**: Conjunto de caracteres a eliminar. | Elimina todos los caracteres indicados en `set` que se encuentren al principio y al final de `s1`. |
-| `char **ft_split(const char *s, char c);` | **`s`**: Cadena a dividir.<br>
+|**`set`**: Conjunto de caracteres a eliminar. | Elimina todos los caracteres indicados en `set` que se encuentren al principio y al final de `s1`. |
+| `char **ft_split(const char *s, char c);` | **`s`**: Cadena a dividir.|
 
-<br>**`c`**: Carácter delimitador. | Divide la cadena `s` usando el carácter `c` como delimitador, devolviendo un array de strings terminado en `NULL`. |
+|**`c`**: Carácter delimitador. | Divide la cadena `s` usando el carácter `c` como delimitador, devolviendo un array de strings terminado en `NULL`. |
 | `char *ft_itoa(int n);` | **`n`**: Número entero a convertir. | Convierte un número entero `n` en una cadena de caracteres alojada en memoria dinámica. |
-| `char *ft_strmapi(const char *s, char (*f)(unsigned int, char));` | **`s`**: Cadena a iterar.<br>
+| `char *ft_strmapi(const char *s, char (*f)(unsigned int, char));` | **`s`**: Cadena a iterar.|
 
-<br>**`f`**: Función a aplicar a cada carácter (recibe índice y carácter). | Aplica la función `f` a cada carácter de `s`, creando una nueva cadena con los resultados. |
-| `void ft_striteri(const char *s, void (*f)(unsigned int, char*));` | **`s`**: Cadena a iterar.<br>
+|**`f`**: Función a aplicar a cada carácter (recibe índice y carácter). | Aplica la función `f` a cada carácter de `s`, creando una nueva cadena con los resultados. |
+| `void ft_striteri(const char *s, void (*f)(unsigned int, char*));` | **`s`**: Cadena a iterar.|
 
-<br>**`f`**: Función a aplicar (recibe índice y puntero al carácter). | Aplica la función `f` a cada carácter de `s` pasando su dirección (modifica la cadena in situ). |
-| `void ft_putchar_fd(char c, int fd);` | **`c`**: Carácter a escribir.<br>
+|**`f`**: Función a aplicar (recibe índice y puntero al carácter). | Aplica la función `f` a cada carácter de `s` pasando su dirección (modifica la cadena in situ). |
+| `void ft_putchar_fd(char c, int fd);` | **`c`**: Carácter a escribir.|
 
-<br>**`fd`**: Descriptor de archivo (`file descriptor`). | Escribe el carácter `c` en el descriptor de archivo especificado. |
-| `void ft_putstr_fd(const char *s, int fd);` | **`s`**: Cadena a escribir.<br>
+|**`fd`**: Descriptor de archivo (`file descriptor`). | Escribe el carácter `c` en el descriptor de archivo especificado. |
+| `void ft_putstr_fd(const char *s, int fd);` | **`s`**: Cadena a escribir.|
 
-<br>**`fd`**: Descriptor de archivo. | Escribe la cadena `s` en el descriptor de archivo especificado. |
-| `void ft_putendl_fd(const char *s, int fd);` | **`s`**: Cadena a escribir.<br>
+|**`fd`**: Descriptor de archivo. | Escribe la cadena `s` en el descriptor de archivo especificado. |
+| `void ft_putendl_fd(const char *s, int fd);` | **`s`**: Cadena a escribir.|
 
-<br>**`fd`**: Descriptor de archivo. | Escribe la cadena `s` seguida de un salto de línea en el descriptor de archivo. |
-| `void ft_putnbr_fd(int n, int fd);` | **`n`**: Número entero a escribir.<br>
+|**`fd`**: Descriptor de archivo. | Escribe la cadena `s` seguida de un salto de línea en el descriptor de archivo. |
+| `void ft_putnbr_fd(int n, int fd);` | **`n`**: Número entero a escribir.|
 
-<br>**`fd`**: Descriptor de archivo. | Escribe el número entero `n` en el descriptor de archivo especificado. |
+|**`fd`**: Descriptor de archivo. | Escribe el número entero `n` en el descriptor de archivo especificado. |
 
 ---
 
@@ -182,34 +182,34 @@ A continuación se detallan las funciones implementadas en la librería `libft`,
 | Función (Firma) | Parámetros | Descripción |
 | --- | --- | --- |
 | `t_list *ft_lstnew(void *content);` | **`content`**: El contenido con el que se inicializará el nodo. | Crea un nuevo nodo de lista reservando memoria, asignando `content` y poniendo `next` a `NULL`. |
-| `void ft_lstadd_front(t_list **lst, t_list *new);` | **`lst`**: Puntero al primer nodo de la lista.<br>
+| `void ft_lstadd_front(t_list **lst, t_list *new);` | **`lst`**: Puntero al primer nodo de la lista.|
 
-<br>**`new`**: El nodo que se va a añadir. | Añade el nodo `new` al principio de la lista enlazada. |
+|**`new`**: El nodo que se va a añadir. | Añade el nodo `new` al principio de la lista enlazada. |
 | `int ft_lstsize(t_list *lst);` | **`lst`**: El primer nodo de la lista. | Cuenta y devuelve el número de elementos contenidos en la lista enlazada. |
 | `t_list *ft_lstlast(t_list *lst);` | **`lst`**: El primer nodo de la lista. | Devuelve el último nodo de la lista enlazada. |
-| `void ft_lstadd_back(t_list **lst, t_list *new);` | **`lst`**: Puntero al primer nodo de la lista.<br>
+| `void ft_lstadd_back(t_list **lst, t_list *new);` | **`lst`**: Puntero al primer nodo de la lista.|
 
-<br>**`new`**: El nodo que se va a añadir. | Añade el nodo `new` al final de la lista enlazada. |
-| `void ft_lstdelone(t_list *lst, void (*del)(void*));` | **`lst`**: El nodo a liberar.<br>
+|**`new`**: El nodo que se va a añadir. | Añade el nodo `new` al final de la lista enlazada. |
+| `void ft_lstdelone(t_list *lst, void (*del)(void*));` | **`lst`**: El nodo a liberar.|
 
-<br>**`del`**: Función para liberar el contenido del nodo. | Libera la memoria del contenido del nodo usando `del` y luego libera el nodo en sí. |
-| `void ft_lstclear(t_list **lst, void (*del)(void*));` | **`lst`**: Puntero al primer nodo de la lista.<br>
+|**`del`**: Función para liberar el contenido del nodo. | Libera la memoria del contenido del nodo usando `del` y luego libera el nodo en sí. |
+| `void ft_lstclear(t_list **lst, void (*del)(void*));` | **`lst`**: Puntero al primer nodo de la lista.|
 
-<br>**`del`**: Función para liberar el contenido de los nodos. | Elimina y libera todos los nodos de la lista de forma consecutiva, dejando el puntero principal a `NULL`. |
-| `void ft_lstiter(t_list *lst, void (*f)(void *));` | **`lst`**: Puntero al primer nodo.<br>
+|**`del`**: Función para liberar el contenido de los nodos. | Elimina y libera todos los nodos de la lista de forma consecutiva, dejando el puntero principal a `NULL`. |
+| `void ft_lstiter(t_list *lst, void (*f)(void *));` | **`lst`**: Puntero al primer nodo.|
 
-<br>**`f`**: Función a aplicar sobre el contenido de cada nodo. | Itera sobre la lista aplicando la función `f` al contenido de cada nodo. |
-| `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));` | **`lst`**: Puntero al primer nodo.<br>
+|**`f`**: Función a aplicar sobre el contenido de cada nodo. | Itera sobre la lista aplicando la función `f` al contenido de cada nodo. |
+| `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));` | **`lst`**: Puntero al primer nodo.|
 
-<br>**`f`**: Función a aplicar al contenido.<br>
+|**`f`**: Función a aplicar al contenido.|
 
-<br>**`del`**: Función para liberar contenido si falla la asignación. | Itera aplicando `f` al contenido de cada nodo y crea una *nueva* lista con los resultados. |
-
----
+|**`del`**: Función para liberar contenido si falla la asignación. | Itera aplicando `f` al contenido de cada nodo y crea una *nueva* lista con los resultados. |
 
 ---
 
-## 📚 Recursos y Uso de IA
+---
+
+## Recursos y Uso de IA
 
 ### Recursos de Referencia
 
