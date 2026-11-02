@@ -6,7 +6,7 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 16:53:30 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/10/28 16:57:35 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/11/02 15:39:59 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (*s)
 		f(i++, s++);
