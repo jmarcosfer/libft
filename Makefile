@@ -1,3 +1,5 @@
+.PHONY: all re fclean clean
+
 NAME := libft.a
 HEADER := $(NAME:%.a=%.h)
 SRCS := $(wildcard ft_*.c)
