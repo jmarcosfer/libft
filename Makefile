@@ -17,7 +17,7 @@ $(OBJECTS): $(SRCS) $(HEADER) Makefile
 re: fclean all
 
 fclean: clean
-	rm $(NAME)
+	rm -rf $(NAME)
 
 clean:
-	rm -f $(OBJECTS)
+	rm -rf $(OBJECTS)
