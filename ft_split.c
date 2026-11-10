@@ -6,7 +6,7 @@
 /*   By: jmarcos <jmarcos@student.42barcelona.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 17:31:15 by jmarcos           #+#    #+#             */
-/*   Updated: 2026/11/02 15:50:36 by jmarcos          ###   ########.fr       */
+/*   Updated: 2026/11/10 16:11:00 by jmarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ static char	**single_item_arr(char *item)
 
 	arr = create_arr(1);
 	if (!arr)
+	{
+		free(item);
 		return (NULL);
+	}
 	*arr = item;
 	return (arr);
 }
@@ -48,19 +51,25 @@ static char	**arr_prepend(char **old_arr, char *new_item)
 	size_t			old_arr_len;
 	unsigned int	i;
 
+	if (old_arr == NULL)
+	{
+		free(new_item);
+		return (NULL);
+	}
 	old_arr_len = 0;
 	while (old_arr[old_arr_len])
 		old_arr_len++;
 	new_arr = create_arr(old_arr_len + 1);
 	if (!new_arr)
-		return (NULL);
-	*new_arr = new_item;
-	i = 0;
-	while (i < old_arr_len)
 	{
-		new_arr[i + 1] = old_arr[i];
-		i++;
+		free(old_arr);
+		free(new_item);
+		return (NULL);
 	}
+	*new_arr = new_item;
+	i = -1;
+	while (++i < old_arr_len)
+		new_arr[i + 1] = old_arr[i];
 	free(old_arr);
 	return (new_arr);
 }
